@@ -1,0 +1,76 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url("SL_110720_37770_21.jpg");
+  background-size: cover;
+}
+.copy-container h1 {
+  font-size: 45px;
+  margin-bottom: 190px;
+  color:  rgba(255, 255, 255, .75);
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 75px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 75px);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  color: white;
+  font-size: 2rem;
+  border: 1px solid rgb(255, 255, 255);
+  outline: none;
+  
+}
+
+.num {
+  background-color: rgba(19, 18, 18, 0.966);
+}
+
+.op {
+  background-color: rgb(150, 103, 3);
+}
+
+.calculator-grid > button:hover {
+  background-color: rgba(139, 56, 45, 0.459);
+}
+
+.span-two {
+  grid-column: span 2;
+  background-color: rgb(20, 53, 104);
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(27, 27, 27, 0.75);
+  display: flex;
+  border: 2px solid white;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, .75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
